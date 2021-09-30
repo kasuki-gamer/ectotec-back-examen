@@ -43,8 +43,8 @@ namespace ectotec.Negocio.Implementations
             var resp = new ContactoViewModel();
             try
             {
-                // _context.Contacto.Add(model);
-                // await _context.SaveChangesAsync();
+                _context.Contacto.Add(model);
+                await _context.SaveChangesAsync();
 
                 var email = _emailSender.MailRegistro(Ruta, model.Nombre, model.Email);
 
